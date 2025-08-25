@@ -88,16 +88,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
-        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+<!-- Hero Section con imagen de fondo -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden hero-bg-img">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="relative z-10 text-center text-white px-4">
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">MI RESTAURANTE</h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90">Experiencia Gastronómica Única</p>
-            <button class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Explorar Menú
-            </button>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">Menú</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Conoce todos nuestros platillos dando click ;)</p>
+           
         </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
         
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -108,7 +110,7 @@
     <!-- Platillos 1 Section -->
     <section id="platillos1" class="py-20 min-h-screen">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">PLATILLOS PRINCIPALES</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16"><br> PLATILLOS PRINCIPALES</h2>
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Menu Items -->
@@ -192,6 +194,15 @@
                         </div>
                         <p class="text-gray-600 dark:text-gray-400">Lo mejor de nuestro menú en una presentación excepcional</p>
                     </div>
+                
+                     <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/delicious-gourmet-salmon-seafood-meal-260nw-2481122797.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Experiencia Premium 2</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$33.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Lo mejor de nuestro menú en una presentación excepcional</p>
+                    </div>
+                
                 </div>
 
                 <!-- Image -->
@@ -202,6 +213,8 @@
                              class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </section>
@@ -323,6 +336,7 @@
 
             <!-- Menu Items in Two Columns -->
             <div class="grid md:grid-cols-2 gap-8">
+
                 <!-- Left Column -->
                 <div class="space-y-6">
                     <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.allrecipes.com/thmb/hDgIUvsnTvL7OBtGF-6uvBB0XPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/102561327_3-Cocktails-on-Bar_Photo-by-Meredith-4cbb7cc1a5d3451abf298d8fef7909b9.jpg">
@@ -412,7 +426,7 @@
         </div>
     </section>
 
-    <!-- Contacto Section -->
+   <!-- Contacto Section -->
     <section id="contacto" class="py-20 min-h-screen">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">CONTACTO</h2>
@@ -429,7 +443,6 @@
                                 <p class="text-gray-600 dark:text-gray-400">Av. Gastronómica 123, Centro Histórico</p>
                             </div>
                         </div>
-                        
                         <div class="flex items-center">
                             <i class="fas fa-phone text-yellow-500 text-xl mr-4"></i>
                             <div>
@@ -437,7 +450,6 @@
                                 <p class="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
                             </div>
                         </div>
-                        
                         <div class="flex items-center">
                             <i class="fas fa-envelope text-yellow-500 text-xl mr-4"></i>
                             <div>
@@ -445,7 +457,6 @@
                                 <p class="text-gray-600 dark:text-gray-400">reservas@mirestaurante.com</p>
                             </div>
                         </div>
-                        
                         <div class="flex items-center">
                             <i class="fas fa-clock text-yellow-500 text-xl mr-4"></i>
                             <div>
@@ -454,7 +465,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="flex space-x-4">
                         <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-colors">
                             <i class="fab fa-facebook-f"></i>
@@ -467,51 +477,14 @@
                         </a>
                     </div>
                 </div>
-
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6">Reserva tu Mesa</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Nombre Completo</label>
-                            <input type="text" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Teléfono</label>
-                            <input type="tel" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-                        </div>
-                        
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Fecha</label>
-                                <input type="date" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Personas</label>
-                                <select class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-                                    <option>1 persona</option>
-                                    <option>2 personas</option>
-                                    <option>3 personas</option>
-                                    <option>4 personas</option>
-                                    <option>5+ personas</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Mensaje (opcional)</label>
-                            <textarea rows="4" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors">
-                            Enviar Reserva
-                        </button>
-                    </form>
+                    <h3 class="text-2xl font-semibold mb-6">Mapa</h3>
+                    <div class="rounded-lg overflow-hidden shadow-lg" style="height: 400px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.123456789!2d-99.123456789!3d19.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f123456789ab%3A0x123456789abcdef!2sRestaurante%20Ejemplo!5e0!3m2!1ses!2smx!4v1690000000000!5m2!1ses!2smx"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -524,25 +497,7 @@
         </div>
     </footer>
 
-    <!-- Modal for Welcome Offer -->
-    <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-md w-full p-8 relative transform scale-95 opacity-0 transition-all duration-300">
-            <button id="closeWelcomeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4 text-yellow-500">¡Bienvenido!</h3>
-                <p class="mb-6 text-gray-600 dark:text-gray-400">
-                    Obtén un <strong>20% de descuento</strong> en tu primera visita. 
-                    Menciona el código <strong class="text-yellow-500">"BIENVENIDO"</strong> al realizar tu reserva.
-                </p>
-                <button id="acceptOffer" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors">
-                    ¡Acepto la Oferta!
-                </button>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Modal for Menu Items -->
     <div id="itemModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
