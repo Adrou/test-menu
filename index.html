@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI RESTAURANTE - Experiencia Gastronómica Única</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-poppins transition-all duration-300">
+    
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="https://cdn.abacus.ai/images/215992bd-2891-454a-a398-5501e241d2f3.png" alt="MI RESTAURANTE Logo" class="h-12 w-auto">
+                </div>
+
+                <!-- Social Media Icons - Desktop -->
+                <div class="hidden md:flex items-center space-x-4 mr-8">
+                    <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Navigation Menu - Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#platillos1" class="nav-link text-white hover:text-yellow-400 transition-colors font-medium">PLATILLOS 1</a>
+                    <a href="#platillos2" class="nav-link text-white hover:text-yellow-400 transition-colors font-medium">PLATILLOS 2</a>
+                    <a href="#bebidas" class="nav-link text-white hover:text-yellow-400 transition-colors font-medium">BEBIDAS</a>
+                    <a href="#contacto" class="nav-link text-white hover:text-yellow-400 transition-colors font-medium">Contacto</a>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button id="themeToggle" class="p-2 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-colors">
+                        <i id="themeIcon" class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-white hover:text-yellow-400 transition-colors">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-black bg-opacity-95 backdrop-blur-lg">
+            <div class="px-4 py-6 space-y-4">
+                <!-- Social Media Icons - Mobile -->
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400 transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+                
+                <a href="#platillos1" class="block text-white hover:text-yellow-400 transition-colors text-center py-2">PLATILLOS 1</a>
+                <a href="#platillos2" class="block text-white hover:text-yellow-400 transition-colors text-center py-2">PLATILLOS 2</a>
+                <a href="#bebidas" class="block text-white hover:text-yellow-400 transition-colors text-center py-2">BEBIDAS</a>
+                <a href="#contacto" class="block text-white hover:text-yellow-400 transition-colors text-center py-2">Contacto</a>
+                
+                <!-- Dark Mode Toggle - Mobile -->
+                <div class="flex justify-center pt-4">
+                    <button id="mobileThemeToggle" class="p-2 rounded-full bg-gray-800 text-white hover:bg-gray-700 transition-colors">
+                        <i id="mobileThemeIcon" class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">MI RESTAURANTE</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Experiencia Gastronómica Única</p>
+            <button class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                Explorar Menú
+            </button>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Platillos 1 Section -->
+    <section id="platillos1" class="py-20 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">PLATILLOS PRINCIPALES</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Menu Items -->
+                <div class="space-y-8">
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://i.ytimg.com/vi/Lcf7fBBo824/hqdefault.jpg?v=65914e66">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Salmón a la Plancha Premium</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$28.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Filete de salmón noruego con salsa de eneldo y vegetales de temporada</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://media.istockphoto.com/id/509437526/photo/aerial-salmon-modern-dish.jpg?s=612x612&w=0&k=20&c=quxXBN_j3PFVeT26-A9KKd3VTTKTt_Wy92NhtYyu0Vs=">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Salmón Gourmet Aéreo</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$32.00</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Presentación moderna con microgreens y reducción balsámica</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/delicious-gourmet-salmon-seafood-meal-260nw-2481122797.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Delicia Marina</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$26.75</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Salmón gourmet con mariscos selectos y salsa especial de la casa</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-260nw-2489026949.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Filete Verde Perfection</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$29.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Salmón frito con hierbas verdes y acompañamiento de quinoa</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://media.gettyimages.com/id/185109733/photo/dinner.jpg?s=612x612&w=gi&k=20&c=4BG1r2pjMRARqYP1HMOeEu4U7g2HliJikgJ31QdXOIU=">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Cena Elegante</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$35.00</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Experiencia culinaria completa con proteína premium y guarniciones</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/food-fish-dish-elegant-chef-600nw-1627955866.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Creación del Chef</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$31.25</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Plato elegante diseñado por nuestro chef ejecutivo</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3390233143786100848">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Especialidad Instagram</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$27.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Plato fotogénico perfecto para compartir en redes sociales</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://i.ytimg.com/vi/Lcf7fBBo824/hqdefault.jpg?v=65914e66">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Clásico de la Casa</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$24.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Nuestro platillo insignia preparado con la receta tradicional</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://media.istockphoto.com/id/509437526/photo/aerial-salmon-modern-dish.jpg?s=612x612&w=0&k=20&c=quxXBN_j3PFVeT26-A9KKd3VTTKTt_Wy92NhtYyu0Vs=">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Festival de Sabores</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$30.75</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Combinación única de sabores mediterráneos y técnicas modernas</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/delicious-gourmet-salmon-seafood-meal-260nw-2481122797.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Experiencia Premium</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$33.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Lo mejor de nuestro menú en una presentación excepcional</p>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="order-first md:order-last">
+                    <div class="relative h-96 md:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+                        <img src="https://media.istockphoto.com/id/509437526/photo/aerial-salmon-modern-dish.jpg?s=612x612&w=0&k=20&c=quxXBN_j3PFVeT26-A9KKd3VTTKTt_Wy92NhtYyu0Vs=" 
+                             alt="Platillos Principales" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platillos 2 Section -->
+    <section id="platillos2" class="py-20 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">ESPECIALIDADES GOURMET</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div>
+                    <div class="relative h-96 md:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+                        <img src="https://www.shutterstock.com/image-photo/gourmet-salad-presentation-moody-ambient-260nw-2607974739.jpg" 
+                             alt="Especialidades Gourmet" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                </div>
+
+                <!-- Menu Items -->
+                <div class="space-y-8">
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://i.ytimg.com/vi/Lcf7fBBo824/hqdefault.jpg?v=65914e66">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Entrada Signature</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$18.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Aperitivo exclusivo con ingredientes importados y presentación única</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/gourmet-salad-presentation-moody-ambient-260nw-2607974739.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Ensalada Gourmet Moody</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$22.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Presentación artística con ambiente sofisticado y sabores únicos</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/dessert-black-plate-elegant-chocolate-600nw-1112871545.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Postre Elegante Negro</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$16.75</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Chocolate elegante con presentación dramática en plato negro</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/food-fish-elegant-gourmet-black-600nw-1425855308.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Pescado Elegante Negro</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$34.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Preparación gourmet con presentación en plato negro minimalista</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://berriesandspice.com/wp-content/uploads/2018/04/Berries-and-Spice-Exquisite-halibut-lemon-verbena-golden-curry-quince-and-kumquat-76.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Halibut Berries & Spice</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$38.25</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Halibut exquisito con verbena de limón, curry dorado y kumquat</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://thumbs.dreamstime.com/b/delightful-dessert-features-layers-creamy-goodness-topped-fresh-berries-chocolate-drizzle-elegant-plating-shines-388280217.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Postre Delicioso Premium</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$19.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Capas cremosas con frutos rojos frescos y drizzle de chocolate</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://thumbs.dreamstime.com/b/gourmet-chef-plating-intricate-dish-arranging-delicate-microgreen-salad-atop-spiral-ruby-elegance-image-has-been-303197651.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Elegancia Rubí Espiral</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$29.75</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Plato intrincado con microgreens delicados y presentación en espiral</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/gourmet-salad-presentation-moody-ambient-260nw-2607974739.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Creación Artística</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$26.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Obra de arte comestible con técnicas culinarias avanzadas</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/dessert-black-plate-elegant-chocolate-600nw-1112871545.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Dulce Tentación</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$21.25</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Postre irresistible con texturas y sabores sorprendentes</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/food-fish-elegant-gourmet-black-600nw-1425855308.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Selección del Chef</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$36.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Lo mejor de nuestra cocina en una experiencia memorable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bebidas Section -->
+    <section id="bebidas" class="py-20 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">BEBIDAS & COCTELES</h2>
+            
+            <!-- Featured Image -->
+            <div class="mb-16">
+                <div class="relative h-64 md:h-80 rounded-lg overflow-hidden shadow-2xl mx-auto max-w-4xl">
+                    <img src="https://cdn.abacus.ai/images/c5ceaa3b-b023-4917-8a87-6f1897da1b41.png" 
+                         alt="Bebidas Centrales" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Menu Items in Two Columns -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Left Column -->
+                <div class="space-y-6">
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.allrecipes.com/thmb/hDgIUvsnTvL7OBtGF-6uvBB0XPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/102561327_3-Cocktails-on-Bar_Photo-by-Meredith-4cbb7cc1a5d3451abf298d8fef7909b9.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Cóctel Signature Trio</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$15.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Selección de tres cócteles premium preparados por nuestros mixólogos</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/happy-people-toasting-cocktail-glasses-600nw-2594343221.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Brindis Celebración</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$12.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Bebida perfecta para celebrar momentos especiales con amigos</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/latte-americano-orange-juice-lime-600nw-2122885682.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Variedad Matutina</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$8.75</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Latte, americano, jugo de naranja y lima fresca</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://ca-times.brightspotcdn.com/dims4/default/a9d1e24/2147483647/strip/true/crop/3448x2299+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F25%2F17%2Fce0877f143b3b80abcf940104122%2F1367525-fo-101-drinks-fable-and-spirit-jja-0006.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Fable & Spirit</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$16.25</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Cóctel artesanal con historia única y sabores memorables</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://media.istockphoto.com/id/1499249954/photo/group-of-happy-friends-toasting-and-drinking-fancy-cocktails-at-bar-terrace-three-young-girls.jpg?s=612x612&w=0&k=20&c=iyY7fhmCurMKogYjKHOSFJ5oCpCz65hDWqToLalNhk0=">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Terrace Fancy</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$14.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Cócteles elegantes perfectos para disfrutar en nuestra terraza</p>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-6">
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://media.istockphoto.com/id/917737514/photo/barmans-hands-sprinkling-the-juice-into-the-cocktail-glass.jpg?s=612x612&w=0&k=20&c=9gWN7LlTLDxal1QUpVYHSLUwJ6U9NoYWG52K2GVVFPI=">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Arte del Barman</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$13.75</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Preparación artesanal con técnica profesional y presentación única</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.shutterstock.com/image-photo/happy-friends-group-cheering-mojito-600nw-2101691149.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Mojito Grupal</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$11.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Mojito refrescante perfecto para compartir con amigos</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://media.istockphoto.com/id/1351860799/photo/hipster-friends-toasting-multicolored-fancy-drinks-at-fashion-bar-trendy-people-having-fun.jpg?s=612x612&w=0&k=20&c=_2X5J3zzmCC-fJDjw2oTH7YvO-V_40F0KtMDE04GrAg=">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Hipster Fashion</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$17.25</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Bebidas multicolor elegantes para el público más trendy</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://thumbs.dreamstime.com/b/bartender-hand-multicolored-fashion-drinks-cocktail-bar-bartender-hand-multicolored-fashion-drink-straw-vintage-103651937.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Vintage Multicolor</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$15.90</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">Bebida fashion con estilo vintage y presentación colorida</p>
+                    </div>
+
+                    <div class="menu-item p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer" data-image="https://www.allrecipes.com/thmb/hDgIUvsnTvL7OBtGF-6uvBB0XPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/102561327_3-Cocktails-on-Bar_Photo-by-Meredith-4cbb7cc1a5d3451abf298d8fef7909b9.jpg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold hover:text-yellow-500 transition-colors">Clásico Premium</h3>
+                            <span class="text-yellow-500 font-bold text-lg">$18.50</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">La mejor selección de cócteles clásicos con ingredientes premium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-20 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">CONTACTO</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Información de Contacto</h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-500 text-xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Dirección</p>
+                                <p class="text-gray-600 dark:text-gray-400">Av. Gastronómica 123, Centro Histórico</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-yellow-500 text-xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Teléfono</p>
+                                <p class="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-yellow-500 text-xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600 dark:text-gray-400">reservas@mirestaurante.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-yellow-500 text-xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Horarios</p>
+                                <p class="text-gray-600 dark:text-gray-400">Lun-Dom: 12:00 PM - 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-red-600 hover:bg-red-700 text-white p-3 rounded-full transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Reserva tu Mesa</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Nombre Completo</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Teléfono</label>
+                            <input type="tel" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Fecha</label>
+                                <input type="date" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Personas</label>
+                                <select class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+                                    <option>1 persona</option>
+                                    <option>2 personas</option>
+                                    <option>3 personas</option>
+                                    <option>4 personas</option>
+                                    <option>5+ personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Mensaje (opcional)</label>
+                            <textarea rows="4" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Enviar Reserva
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-600 dark:text-gray-400">&copy; 2024 MI RESTAURANTE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Welcome Offer -->
+    <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-md w-full p-8 relative transform scale-95 opacity-0 transition-all duration-300">
+            <button id="closeWelcomeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4 text-yellow-500">¡Bienvenido!</h3>
+                <p class="mb-6 text-gray-600 dark:text-gray-400">
+                    Obtén un <strong>20% de descuento</strong> en tu primera visita. 
+                    Menciona el código <strong class="text-yellow-500">"BIENVENIDO"</strong> al realizar tu reserva.
+                </p>
+                <button id="acceptOffer" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors">
+                    ¡Acepto la Oferta!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Menu Items -->
+    <div id="itemModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full relative">
+            <button id="closeItemModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="p-0">
+                <img id="modalImage" src="" alt="" class="w-full h-64 md:h-80 object-cover rounded-t-lg">
+                <div class="p-6">
+                    <h3 id="modalTitle" class="text-2xl font-bold mb-2"></h3>
+                    <p id="modalPrice" class="text-yellow-500 font-bold text-xl mb-4"></p>
+                    <p id="modalDescription" class="text-gray-600 dark:text-gray-400"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
